@@ -1,0 +1,64 @@
+{
+  "name": "react-body",
+  "version": "0.1.0",
+  "description": "A React component that conditionally adds CSS class name(s) to document.body",
+  "repository": "koistya/react-body",
+  "author": "Konstantin Tarkus <hello@tarkus.me> (https://www.codementor.io/koistya)",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react.js",
+    "reactjs",
+    "component",
+    "react component",
+    "react-component",
+    "reactjs component",
+    "react.js component",
+    "css",
+    "css class",
+    "classname"
+  ],
+  "main": "main.js",
+  "babel": {
+    "presets": [
+      "react",
+      "es2015",
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-runtime"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+      "browser": true
+    },
+    "rules": {
+      "react/no-danger": 0
+    }
+  },
+  "dependencies": {
+    "babel-runtime": ">= 6 && < 7",
+    "react": ">= 15 && < 16"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.5.0"
+  },
+  "scripts": {
+    "lint": "eslint main.jsx",
+    "build": "babel main.jsx -o main.js"
+  }
+}
