@@ -1,6 +1,6 @@
 {
   "name": "react-body",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A React component that conditionally adds CSS class name(s) to document.body",
   "repository": "koistya/react-body",
   "author": "Konstantin Tarkus <hello@tarkus.me> (https://www.codementor.io/koistya)",
