@@ -22,7 +22,9 @@ class Body extends React.Component {
 
   componentDidMount() {
     if (this.props.if) {
-      document.body.classList.add(this.props.className);
+      this.props.className.split(' ').forEach(c => {
+        document.body.classList.add(c);
+      });
     }
   }
 
@@ -31,17 +33,21 @@ class Body extends React.Component {
   }
 
   componentDidUpdate() {
-    document.body.classList[this.props.if ? 'add' : 'remove'](this.props.className);
+    this.props.className.split(' ').forEach(c => {
+      document.body.classList[this.props.if ? 'add' : 'remove'](c);
+    });
   }
 
   componentWillUnmount() {
-    document.body.classList.remove(this.props.className);
+      this.props.className.split(' ').forEach(c => {
+        document.body.classList.remove(c);
+      });
   }
 
   render() {
     return this.props.if ? <script
       dangerouslySetInnerHTML={{
-        __html: `document.body.classList.add('${this.props.className}');`,
+        __html: this.props.className.split(' ').map(c => `document.body.classList.add(${c});`).join(' '),
       }}
     /> : null;
   }
