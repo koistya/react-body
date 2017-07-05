@@ -47,7 +47,9 @@ var Body = function (_React$Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       if (this.props.if) {
-        document.body.classList.add(this.props.className);
+        this.props.className.split(' ').forEach(function (c) {
+          document.body.classList.add(c);
+        });
       }
     }
   }, {
@@ -58,19 +60,27 @@ var Body = function (_React$Component) {
   }, {
     key: 'componentDidUpdate',
     value: function componentDidUpdate() {
-      document.body.classList[this.props.if ? 'add' : 'remove'](this.props.className);
+      var _this2 = this;
+
+      this.props.className.split(' ').forEach(function (c) {
+        document.body.classList[_this2.props.if ? 'add' : 'remove'](c);
+      });
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
-      document.body.classList.remove(this.props.className);
+      this.props.className.split(' ').forEach(function (c) {
+        document.body.classList.remove(c);
+      });
     }
   }, {
     key: 'render',
     value: function render() {
       return this.props.if ? _react2.default.createElement('script', {
         dangerouslySetInnerHTML: {
-          __html: 'document.body.classList.add(\'' + this.props.className + '\');'
+          __html: this.props.className.split(' ').map(function (c) {
+            return 'document.body.classList.add(' + c + ');';
+          }).join(' ')
         }
       }) : null;
     }
