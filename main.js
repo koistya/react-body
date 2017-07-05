@@ -28,6 +28,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
@@ -35,6 +39,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  *
  *   <Body className="dark" if={this.context.theme.isDark} />
  */
+/**
+ * Copyright © 2016-present Konstantin Tarkus <hello@tarkus.me>
+ */
+
 var Body = function (_React$Component) {
   (0, _inherits3.default)(Body, _React$Component);
 
@@ -86,15 +94,13 @@ var Body = function (_React$Component) {
     }
   }]);
   return Body;
-}(_react2.default.Component); /**
-                               * Copyright © 2016-present Konstantin Tarkus <hello@tarkus.me>
-                               */
+}(_react2.default.Component);
 
 Body.defaultProps = {
   if: true
 };
 Body.propTypes = {
-  className: _react.PropTypes.string.isRequired,
-  if: _react.PropTypes.bool.isRequired
+  className: _propTypes2.default.string.isRequired,
+  if: _propTypes2.default.bool.isRequired
 };
 exports.default = Body;
