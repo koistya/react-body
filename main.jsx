@@ -2,7 +2,8 @@
  * Copyright © 2016-present Konstantin Tarkus <hello@tarkus.me>
  */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * Conditionally adds CSS class name(s) to document.body. For example:
