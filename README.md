@@ -2,13 +2,15 @@
 
 React component that conditionally adds CSS class name(s) to `document.body`
 
----
+- - -
+
 <p align="center">
   <b>🔥 Want to strengthen your core JavaScript skills and master ES6 and React?</b><br>
   I would personally recommend this awesome <a href="https://es6.io/friend/konstantin">ES6</a>
   and <a href="https://reactforbeginners.com/friend/konstantin">React</a> courses by Wes Bos.
 </p>
----
+
+- - -
 
 ### How to Install
 
